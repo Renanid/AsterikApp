@@ -1,9 +1,12 @@
-import { StyleSheet } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import React from 'react';
 
 export default StyleSheet.create({
     background:{
         backgroundColor:'#F7F153',
+        flex:1
+    },
+    background2:{
         flex:1
     },
 
@@ -19,16 +22,20 @@ export default StyleSheet.create({
         
     },
     textoLink:{
-        color:'#f00',
-        fontSize:14,
-        marginRight:165,
-        padding: 1,
+        color:'#277ED8',
+        fontSize:16,
+      
 
     },
     textoTitulo:{
         color:'#000000',
         fontSize:22,
-        textAlign:'center'
+        textAlign:'center',
+        borderColor:'#fff',
+        textShadowColor:'#fff',
+        textShadowOffset:{width: 2, height: 2},
+        textShadowRadius:3,
+      
         
     },
     logo:{

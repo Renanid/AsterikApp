@@ -3,33 +3,28 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
- 
-import Login from './src/pages/Login';
-import Sobre from './src/pages/Sobre';
-import Historico from './src/pages/Historico';
-import CadastroCliente from './src/pages/CadastroCliente';
-import HistoricoInterno from './src/pages/HistoricoInterno';
-import RecuperarSenha from './src/pages/RecuperarSenha';
- 
+
+import Home from './src/pages/Home';
+import Contato from './src/pages/Contato';
+import Acomodacoes from './src/pages/Acomodacoes';
+
+import api from './src/services/api'
+
+
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
  
 const icons = {
-  Login: {
-    name: 'person-circle-outline'
+  Home: {
+    name: 'home'
   },
-  Sobre:{
-    name: 'information-outline'
+  Contato: {
+    name: 'call-outline'
   },
-  Historico:{
-    name: 'list-circle-outline'
+  Acomodacoes: {
+    name: 'bed'
   },
-  CadastroCliente: {
-    name: 'person-add-outline'
-  },
-  HistoricoInterno: {
-    name: 'list-circle-outline'
-  }
+ 
 };
  
 function Tabs(){
@@ -48,11 +43,10 @@ function Tabs(){
         activeTintColor: '#FFF',
       }}
       >
-        <Tab.Screen name="Login" component={Login} />
-        {/*<Tab.Screen name="Sobre" component={Sobre} />*/}
-       {/*<Tab.Screen name="Historico" component={Historico} />*/}
-        <Tab.Screen name="HistoricoInterno" component={HistoricoInterno} />
-        <Tab.Screen name="CadastroCliente" component={CadastroCliente} />
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Acomodacoes" component={Acomodacoes} />
+        <Tab.Screen name="Contato" component={Contato} />
+        
         
         
       </Tab.Navigator>
@@ -63,10 +57,9 @@ export default function App(){
   return(
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Login" component={Tabs} options={{ headerShown: false }} />
-        <Stack.Screen name="HistoricoInterno" component={HistoricoInterno}/>
-        <Stack.Screen name="CadastroCliente" component={CadastroCliente}/>
-        <Stack.Screen name="RecuperarSenha" component={RecuperarSenha}/>
+        <Stack.Screen name="Home" component={Tabs} options={{ headerShown: false }} />
+        <Stack.Screen name="Acomodacoes" component={Acomodacoes}/>
+        <Stack.Screen name="Contato" component={Contato}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
