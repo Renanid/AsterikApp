@@ -9,11 +9,11 @@ export default function Home() {
   const navigation = useNavigation();
   return (
     <View style={Style.background}>
-      <ImageBackground  source={require('../assets/backgroundcontato.jpg')} style={{width: 410, height: '100%'}}>
+      <ImageBackground  source={{ uri: 'https://www.santos.sp.gov.br/static/files_www/field/image/bg-jose.jpg'}} style={{width: 410, height: '100%'}}>
       <View>
         <Logo />
         <Text style={estilo.item}>Já ficou encantado ? Você pode se cadastrar pelo site e fazer sua reserva <Cadastro/> </Text>
-        <Text style={estilo.item}>Também pode ser pelo telefone: 13 99976-0000 </Text>
+        <Text style={estilo.item}>Também pode ser pelo telefone: 13 99999-0000 </Text>
       </View>
       </ImageBackground>
     </View>
@@ -27,11 +27,11 @@ const estilo = StyleSheet.create({
       marginVertical: 8,
       marginHorizontal: 16,
       borderRadius: 10,
-      borderWidth: 1,
-      borderColor: '#000',
+      
+      
   },
   prod: {
       fontSize: 20,
-      color: '#000',
+      
   },
 })

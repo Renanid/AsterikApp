@@ -3,7 +3,6 @@ import React from 'react';
 
 export default StyleSheet.create({
     background:{
-        backgroundColor:'#F7F153',
         flex:1
     },
     background2:{
