@@ -28,9 +28,7 @@ function irContato(){
     usuarioService.login(data)
     .then((response) => {
       setLoading(false)
-      navigation.reset({
-        routes: {irHome}
-      })
+      navigation.navigate("Home")
     })
     .catch((error) => {
       setLoading(false)
