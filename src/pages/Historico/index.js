@@ -1,5 +1,5 @@
 import React, {Component, useEffect, useState} from 'react';
-import { Text, StyleSheet, SafeAreaView, FlatList, View} from 'react-native';
+import { Text, StyleSheet, SafeAreaView, FlatList, View, ActivityIndicator} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Logo from '../assets/logo.js'
 import api from './api';
