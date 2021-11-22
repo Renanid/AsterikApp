@@ -6,7 +6,7 @@ export default function Cadastro() {
 
     return (
         <View>
-            <TouchableHighlight onPress={() => Linking.openURL('https://asteriskhotel.herokuapp.com')}>
+            <TouchableHighlight onPress={() => Linking.openURL('https://asteriskhotel.netlify.app/home')}>
             <Text style={Style.textoLink}>Clicando aqui</Text>
           </TouchableHighlight>
         </View>
